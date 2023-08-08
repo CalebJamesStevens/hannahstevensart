@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bend, Oregon Artist Portfolio Website
 
-## Getting Started
+Welcome to the repository for the portfolio website of a talented local artist based in Bend, Oregon: Hannah Stevens! This website showcases a collection of the artist's works, providing a glimpse into their creative journey and artistic prowess. Whether you're a local art enthusiast or someone curious about the artistic scene in Bend, this website will give you a comprehensive overview of the artist's talent and passion.
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This website serves as a virtual gallery for the artworks of our local artist based in Bend, Oregon. The website aims to capture the essence of the artist's style, creative process, and inspirations. Visitors can explore various categories of artworks, learn about the artist's background, and even get in touch for inquiries and commissions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Artwork Gallery:** Browse through an extensive collection of the artist's works, sorted by categories such as paintings, sculptures, and digital art.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Contact and Commissions:** Interested buyers and art enthusiasts can use the contact information provided to get in touch for inquiries and potential commissions.
 
-## Learn More
+- **Responsive Design:** The website is designed to be accessible on various devices, ensuring a seamless experience for users regardless of their screen size.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone this repository to your local machine using:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/CalebJamesStevens/hannahstevensart.git
+   ```
 
-## Deploy on Vercel
+2. Navigate to the project directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd bend-artist-portfolio
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Start the server `yarn run dev`
+
+## Usage
+
+- Browse through the various categories of artworks in the gallery.
+- Click on individual artworks to view them in detail.
+- Read the artist's biography to learn about their journey and influences.
+- Use the contact information provided to get in touch for inquiries and commissions.
+
+## Technologies
+
+- Next.js React Framework
+- MUI V
+- TypeScript/JavaScript
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Thank you for your interest in our local Bend, Oregon artist's portfolio website! Feel free to explore the artworks and get in touch with any inquiries. Your feedback and support are greatly appreciated.
