@@ -12,9 +12,7 @@ import {
   ListItemIcon,
   ListItemText,
   Stack,
-  SvgIcon,
   Toolbar,
-  Typography,
 } from "@mui/material";
 import BrushIcon from "@mui/icons-material/Brush";
 import { ContactPage, Email, Menu, MenuOpen, Shop } from "@mui/icons-material";
