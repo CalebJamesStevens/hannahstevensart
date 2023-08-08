@@ -77,7 +77,7 @@ export const Banner = () => {
                 </ListItemButton>
               </ListItem>
               <ListItem>
-                <ListItemButton href="#contact">
+                <ListItemButton href="/#contact">
                   <ListItemIcon>
                     <Email />
                   </ListItemIcon>
