@@ -3,6 +3,7 @@ import ThemeRegistry from "./components/ThemeRegistry/ThemeRegistry";
 import { Container, CssBaseline } from "@mui/material";
 import Banner from "./components/Banner/Banner";
 import { Analytics } from "@vercel/analytics/react";
+import Socials from "./components/Socials/Socials";
 
 export const metadata: Metadata = {
   title: "H Stevens Art",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ThemeRegistry>
           <CssBaseline />
           <Banner />
+          <Socials />
           <Container component={"main"}>{children}</Container>
         </ThemeRegistry>
         <Analytics />

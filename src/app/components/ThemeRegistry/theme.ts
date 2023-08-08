@@ -20,6 +20,9 @@ const theme = createTheme({
     mode: 'light',
     primary: {
       main: '#FF930F'
+    },
+    secondary: {
+      main: '#CB7575'
     }
   },
   typography: {
