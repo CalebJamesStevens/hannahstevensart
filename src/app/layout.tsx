@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ThemeRegistry from "./components/ThemeRegistry/ThemeRegistry";
 import { Container, CssBaseline } from "@mui/material";
 import Banner from "./components/Banner/Banner";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "H Stevens Art",
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Banner />
           <Container component={"main"}>{children}</Container>
         </ThemeRegistry>
+        <Analytics />
       </body>
     </html>
   );
