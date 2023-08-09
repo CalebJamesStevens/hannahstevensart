@@ -19,6 +19,7 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import theme from "../components/ThemeRegistry/theme";
 import React from "react";
 import { ArtPiece, artPieces } from "../artPieces";
+import Image from "next/image";
 
 export default function Work() {
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
@@ -55,10 +56,12 @@ export default function Work() {
             color="inherit"
           >
             <ImageListItem cols={1}>
-              <img
-                width={"248px"}
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
+              <Image
+                height={240}
+                style={{
+                  objectFit: "contain",
+                }}
+                src={item.img}
                 alt={item.title}
                 loading="lazy"
               />
@@ -76,10 +79,12 @@ export default function Work() {
           <Typography variant="h2">{currentImage.title}</Typography>
         </DialogTitle>
         <DialogContent>
-          <img
-            width={"100%"}
-            src={`${currentImage.img}`}
-            srcSet={`${currentImage.img}`}
+          <Image
+            height={240}
+            style={{
+              objectFit: "contain",
+            }}
+            src={currentImage.img}
             alt={currentImage.title}
             loading="lazy"
           />

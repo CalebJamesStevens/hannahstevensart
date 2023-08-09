@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 
+import HannahHeroImage from "../../../../public/HannahHero.png";
+
 import {
   Alert,
   Box,
@@ -18,6 +20,7 @@ import {
 } from "@mui/material";
 import theme, { laBelleAurore } from "../ThemeRegistry/theme";
 import { ArrowForward } from "@mui/icons-material";
+import Image from "next/image";
 
 const styles: Record<string, SxProps<Theme>> = {
   seeMoreLink: {
@@ -47,6 +50,14 @@ const styles: Record<string, SxProps<Theme>> = {
     height: "100%",
     width: "100%",
   },
+  mobileHero: (theme) => ({
+    background: theme.palette.primary.main,
+    paddingX: 2,
+    paddingTop: 2,
+    width: "350px",
+    height: "454px",
+    backdropFilter: "blur(5px)",
+  }),
 };
 
 export default function HomePage() {
@@ -91,15 +102,7 @@ export default function HomePage() {
       gap={20}
     >
       {isMobileMatch ? (
-        <Stack
-          sx={(theme) => ({
-            background: theme.palette.primary.main,
-            paddingX: 2,
-            paddingTop: 2,
-            maxWidth: "350px",
-            backdropFilter: "blur(5px)",
-          })}
-        >
+        <Stack sx={styles.mobileHero}>
           <Typography fontSize={32} fontFamily={laBelleAurore.style.fontFamily}>
             Hello,
           </Typography>
@@ -108,14 +111,13 @@ export default function HomePage() {
             of the vibrant community and rich culture that shaped me, infusing
             my creations with a unique sense of identity and belonging.
           </Typography>
-          <Box
-            height={"270px"}
-            marginTop={1}
-            sx={{
+          <Image
+            height={270}
+            width={318}
+            style={{
               objectFit: "cover",
             }}
-            component="img"
-            src="HannahHero.png"
+            src={HannahHeroImage}
             alt="Picture of Hannah Stevens hold a plant and her daughter"
           />
         </Stack>
@@ -145,16 +147,15 @@ export default function HomePage() {
                 belonging.
               </Typography>
             </Box>
-            <Box
-              height={"270px"}
-              marginTop={1}
-              sx={{
+            <Image
+              height={270}
+              width={202.5}
+              style={{
                 objectFit: "cover",
                 background: theme.palette.primary.main,
                 boxShadow: "8px 8px 0px 0px rgba(0, 0, 0, 0.25)",
               }}
-              component="img"
-              src="HannahHero.png"
+              src={HannahHeroImage}
               alt="Picture of Hannah Stevens hold a plant and her daughter"
             />
           </Stack>
