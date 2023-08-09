@@ -21,6 +21,7 @@ import {
 import theme, { laBelleAurore } from "../ThemeRegistry/theme";
 import { ArrowForward } from "@mui/icons-material";
 import Image from "next/image";
+import { artPieces } from "@/app/artPieces";
 
 const styles: Record<string, SxProps<Theme>> = {
   seeMoreLink: {
@@ -28,6 +29,10 @@ const styles: Record<string, SxProps<Theme>> = {
   },
   artList: {
     width: "100%",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      flexDirection: "row",
+    },
   },
   artCard: {
     width: "100%",
@@ -163,62 +168,37 @@ export default function HomePage() {
       )}
       <Stack alignItems={"center"}>
         <Typography textAlign={"center"} variant="h2">
-          Work
+          My Work
         </Typography>
         <List sx={styles.artList}>
           <ListItem>
-            <Card sx={styles.artCard}>
-              <Typography>Work 1</Typography>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card sx={styles.artCard}>
-              <Typography>Work 2</Typography>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card sx={styles.artCard}>
-              <Typography>Work 3</Typography>
-            </Card>
+            <Image
+              height={240}
+              style={{
+                objectFit: "contain",
+              }}
+              src={artPieces[0].img}
+              alt={artPieces[0].title}
+              loading="lazy"
+            />
           </ListItem>
         </List>
+
         <Button
           sx={styles.seeMoreLink}
           href="/work"
           color="inherit"
           endIcon={<ArrowForward />}
         >
-          See More
+          More Work
         </Button>
-      </Stack>
-      <Stack alignItems={"center"}>
-        <Typography textAlign={"center"} variant="h2">
-          Shop
-        </Typography>
-        <List sx={styles.artList}>
-          <ListItem>
-            <Card sx={styles.artCard}>
-              <Typography>Work 1</Typography>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card sx={styles.artCard}>
-              <Typography>Work 2</Typography>
-            </Card>
-          </ListItem>
-          <ListItem>
-            <Card sx={styles.artCard}>
-              <Typography>Work 3</Typography>
-            </Card>
-          </ListItem>
-        </List>
         <Button
           sx={styles.seeMoreLink}
           href="/shop"
           color="inherit"
           endIcon={<ArrowForward />}
         >
-          See More
+          Shop
         </Button>
       </Stack>
       <Stack
