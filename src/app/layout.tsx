@@ -4,6 +4,7 @@ import { Container, CssBaseline } from "@mui/material";
 import Banner from "./components/Banner/Banner";
 import { Analytics } from "@vercel/analytics/react";
 import Socials from "./components/Socials/Socials";
+import Footer from "./components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "H Stevens Art",
@@ -28,7 +29,10 @@ export default function RootLayout({
           <CssBaseline />
           <Banner />
           <Socials />
-          <Container component={"main"}>{children}</Container>
+          <Container sx={{ overflowX: "hidden" }} component={"main"}>
+            {children}
+          </Container>
+          <Footer />
         </ThemeRegistry>
         <Analytics />
       </body>
